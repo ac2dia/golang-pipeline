@@ -14,14 +14,6 @@ jobs:
     needs: test
     if: startsWith(github.ref, 'refs/tags')
     steps:
-      - name: Access to secrets
-        run: |
-          echo "DOCKERHUB_USERNAME=$DOCKERHUB_USERNAME" >> .env
-          echo "DOCKERHUB_TOKEN=$DOCKERHUB_TOKEN" >> .env
-        env:
-          DOCKERHUB_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
-          DOCKERHUB_TOKEN: ${{secrets.DOCKERHUB_TOKEN}}
-
       - name: Extract Version
         id: version_step
         run: |
