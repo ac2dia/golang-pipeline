@@ -3,8 +3,8 @@
 
 # 📚 기술 스택
 - go 1.18
-- docker
-- docker-hub
+- docker / kubernetes
+- docker-hub / Harbor
 - github workflow
 
 # 🛠 아키텍처
@@ -27,4 +27,14 @@
 ![DockerHub Repo](./docs/image/DockerHub_Repo.png)
 
 # 😎 짧은 평
-- CI/CD 학습을 위한 
+- GitHub Actions 의 Workflow 를 학습함으로써 Event, Job, Step 의 개념 및 사용 방법 습득
+- GitHub Actions 페이지에서 제공하는 workflow 종류
+  - Automation, CI, Deployment, Security, Pages
+
+# 🎃 TODO
+- Private Registry: Harbor 구축 후 연결
+- Kubernetes 구축
+  - App 배포 환경
+- Deploy 기능을 이용하여 쿠버네티스 상에 배포
+  - pod, deployment, service 리소스를 이용하여 배포
+  - ingress controller 를 활용한 무중단 업데이트
