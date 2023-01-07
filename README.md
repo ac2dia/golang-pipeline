@@ -21,10 +21,10 @@
 
 # 🌠 실행 화면
 - [1] Tag 에 대한 Push 발생시 동작하는 화면
-![GitHub Workflow](docs/image/GitHub Workflow.png)
+![GitHub Workflow](./docs/image/GitHub_Workflow.png)
 
 - [2] Deploy 과정 이 후 DockerHub 에 생성된 화면
-![DockerHub Repo](docs/image/DockerHub Repo.png)
+![DockerHub Repo](./docs/image/DockerHub_Repo.png)
 
 # 😎 짧은 평
 - CI/CD 학습을 위한 
