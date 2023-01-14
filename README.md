@@ -1,40 +1,23 @@
-# 🐑 golang-pipeline
-- CI/CD 학습을 위한 GitHub Workflow 샘플입니다. 
+# 🐑 pipeline
+
+- CI/CD 학습을 위한 GitHub Workflow 샘플입니다.
 - OpenStack 인프라 환경에서 Kubernetes, Harbor, ArgoCD 등을 이용하려고 합니다.
 
 # 📚 기술 스택
+
 - openstack / kolla-ansible / xena
-- docker / cri-o / kubernetes v1.25
-- docker-hub / Harbor
+- cri-o / kubernetes v1.25
+- Harbor
 - github workflow / ArgoCD
 
 - golang based web application sample
 
 # 🛠 아키텍처
-- **추가 필요**
+
+![Architecture](./docs/image/architecture.png)
 
 # 🌟 주요 기능
-- GitHub Workflow 를 통해 생성한 두 가지 JOB 이 있으며 commit-push 실행시 hook 이벤트 발생 
 
-
-- 첫 번째 JOB 의 경우 go unit test 를 위한 명령어 실행
-  - master 브랜치 또는 tag 인 경우
-- 두 번째 JOB 의 경우 docker build 이 후 DockerHub Repository 로 푸시
-  - tag 인 경우
-
-# 🌠 실행 화면
-- [1] Tag 에 대한 Push 발생시 동작하는 화면
-![GitHub Workflow](./docs/image/GitHub_Workflow.png)
-
-- [2] Deploy 과정 이 후 DockerHub 에 생성된 화면
-![DockerHub Repo](./docs/image/DockerHub_Repo.png)
-
-# 😎 짧은 평
-- GitHub Actions 의 Workflow 를 학습함으로써 Event, Job, Step 의 개념 및 사용 방법 습득
-- GitHub Actions 페이지에서 제공하는 workflow 종류
-  - Automation, CI, Deployment, Security, Pages
-
-# 🎃 TODO
 - OpenStack 구축
   - IaaS Infra 환경 구축
 - Private Registry
@@ -42,6 +25,46 @@
 - Kubernetes 구축
   - App 배포 환경
   - ArgoCD 배포
-- ArgoCD 를 이용하여 쿠버네티스 상에 배포
+
+# 🌠 실행 화면
+
+[1] OpenStack 인프라
+![openstack_infra](./docs/image/openstack_infra.png)
+
+[2] kubernetes 구성
+![kubernetes](./docs/image/kubernetes.png)
+
+[3] Harbor 배포 및 설정
+
+- 추가 필요
+
+[4] ArgoCD 배포 및 설정
+
+- 추가 필요
+
+[5] GitHub Repository 생성 및 Helm Chart 작성
+
+- 추가 필요
+
+[6] 전체 플로우 확인
+
+- 추가 필요
+
+# 😎 짧은 평
+
+- GitHub Actions 의 Workflow 를 학습함으로써 Event, Job, Step 의 개념 및 사용 방법 습득
+- GitHub Actions 페이지에서 제공하는 workflow 종류
+  - Automation, CI, Deployment, Security, Pages
+- ArgoCD 학습
+- Helm Chart 학습
+
+# 🎃 TODO
+
+- ArgoCD 설정
+  - GitHub에 Helm Chart 이용한 Repository 생성 후 연동
+- GitHub Workflow 를 통해 테스트, 이미지 빌드
+- Helm Chart Repository 의 Helm Chart 갱신
+
+- ArgoCD 에서 Helm Chart Repository 변경사항을 확인한 후 쿠버네티스에 헬름 차트 배포
   - pod, replicaset, deployment, service(nodePort) 리소스를 이용하여 배포
   - ingress controller 를 활용한 무중단 업데이트
