@@ -5,7 +5,7 @@
 - go 1.18
 - docker / kubernetes
 - docker-hub / Harbor
-- github workflow
+- github workflow / ArgoCD
 
 # 🛠 아키텍처
 - **추가 필요**
@@ -32,9 +32,13 @@
   - Automation, CI, Deployment, Security, Pages
 
 # 🎃 TODO
-- Private Registry: Harbor 구축 후 연결
+- OpenStack 구축
+  - IaaS Infra 환경 구축
+- Private Registry
+  - 컨테이너 이미지 레지스트리 저장소
 - Kubernetes 구축
   - App 배포 환경
-- Deploy 기능을 이용하여 쿠버네티스 상에 배포
-  - pod, deployment, service 리소스를 이용하여 배포
+  - ArgoCD 배포
+- ArgoCD 를 이용하여 쿠버네티스 상에 배포
+  - pod, replicaset, deployment, service(nodePort) 리소스를 이용하여 배포
   - ingress controller 를 활용한 무중단 업데이트
