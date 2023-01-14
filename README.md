@@ -1,11 +1,14 @@
 # 🐑 golang-pipeline
 - CI/CD 학습을 위한 GitHub Workflow 샘플입니다. 
+- OpenStack 인프라 환경에서 Kubernetes, Harbor, ArgoCD 등을 이용하려고 합니다.
 
 # 📚 기술 스택
-- go 1.18
-- docker / kubernetes
+- openstack / kolla-ansible / xena
+- docker / cri-o / kubernetes v1.25
 - docker-hub / Harbor
 - github workflow / ArgoCD
+
+- golang based web application sample
 
 # 🛠 아키텍처
 - **추가 필요**
